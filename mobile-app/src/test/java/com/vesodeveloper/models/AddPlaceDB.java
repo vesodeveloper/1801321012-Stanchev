@@ -38,6 +38,6 @@ addplacemodel.pushAddDBButton();
 
 	@Then("^Вижда във записите в базата данни добавеното ново място$")
 	public void ViewAllPlaces(  ) throws Throwable {
-assertEquals("places", addplacemodel.addPlaceMessage());
+assertEquals("OK", addplacemodel.addPlaceMessage());
 	}
 }

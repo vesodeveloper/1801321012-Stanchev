@@ -3,6 +3,8 @@ import com.vesodeveloper.main1.*;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.mockito.internal.stubbing.answers.Returns;
+
 
 public class DBService {
 
@@ -10,7 +12,7 @@ public class DBService {
 		List<com.vesodeveloper.main1.FavPlaces> places=getPlaces();
 		final boolean isTherePlace=places.stream()
 				.anyMatch(place->placeTitle.equals(place.getPlace_name())&& (place.equals(place.getPlace_description())));
-		return isTherePlace  ? "places" : "";
+		return isTherePlace  ? "NO" : "OK";
 	}
 	private static List<FavPlaces> getPlaces(){
 		
@@ -26,11 +28,18 @@ public class DBService {
 		final boolean isNullPlace=places.stream()
 				.anyMatch(place->isnpl.equals(null));
 	
-		return isNullPlace ? "Вижда съобщение за липсващо място":"";
+		return isNullPlace ? "Missed":"OK";
 	}
 	public static String isDescriptionNull(String isNullDesc) {
-		// TODO Auto-generated method stub
-		return null;
+	
+	
+	
+	
+		List<FavPlaces> places=getPlaces();
+		final boolean Desk=places.stream()
+				.anyMatch(place->isNullDesc.equals(null));
+		return Desk ? "Missed" : "OK";
+	
 	}
 		
 		

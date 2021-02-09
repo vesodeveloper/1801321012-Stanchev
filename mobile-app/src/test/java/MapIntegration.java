@@ -19,13 +19,12 @@ public class MapIntegration {
 
 
 	@When("^Може да види интересни места$")
-	public void interestingPlaces (List<FavPlaces>FL) throws Throwable {
+	public void interestingPlaces () throws Throwable {
 	 mapintModel.showPlaces();
 	}
 
 	@Then("^Да направи виртуална разходка в града$")
 	public void да_направи_виртуална_разходка_в_града() throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
+	   mapintModel.walk("Sofia","Varna" );
 	}
 }

@@ -12,20 +12,11 @@ public class HistoryModel {
 	System.out.println("Потребителя 	е на екрана с историята ");
 	}
 
-	public boolean isread(Boolean b) {
-		List<com.vesodeveloper.main1.History1> htview=getHistory();
-		
-		final boolean isRead=htview.stream()
-				.anyMatch(hs->b.equals(true));
-	return isRead ? true : false;
+	public String isread() {
+		String str="Readed";
+return str;
 	}
-	private static List<com.vesodeveloper.main1.History1> getHistory(){
-		History1 h=new History1();
-		h.setAncient_history(true);
-		final List<History1>hl= new ArrayList<History1>();
-		hl.add(h);
-		return hl;
-	}
+	
 
 	public void scrolldown() {
 	System.out.println("Scrolled");

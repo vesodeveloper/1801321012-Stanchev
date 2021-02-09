@@ -16,7 +16,7 @@ public class ViewHistory {
 	
 	@When("^Може да прочете за историята на сливен$")
 	public void readHistory() throws Throwable {
-	    hismodel.isread(null);
+	    hismodel.isread();
 	}
 
 	@When("^Когато потребителя отиде в долната част на екрана$")
